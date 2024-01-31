@@ -10,19 +10,17 @@ import { useNavigate } from "react-router-dom";
 import Cookies from "universal-cookie";
 const Login = () => {
   const cookies=new Cookies();
-  const [user,setUser]=setUser(null)
   const [email,setEmail]=useState("");
   const [password,setPassword]=useState("");
   const navigate = useNavigate();
-  const handleSubmit=async(e)=>{
+
+  const handleSubmit = async(e)=>{
     e.preventDefault();
     const response = await axios.post('http://localhost:5000/auth/login',
     {
       email: email,
       password: password,
     },{headers:{"Content-Type": "application/json"}})
-    // Store the JWT Token as a cookie in the headers
-    setUser(response.data.token)
     cookies.set("jwt_authorization",response.data.token)
 
     if(response.status == 201){
