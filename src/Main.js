@@ -10,18 +10,19 @@ import LandingPage from "./LandingPage";
 import Timer from "./Timer";
 import Mouse from "./Mouse";
 import Overlay from "./Overlay";
+import About from "./About";
 
 const Main = () => {
   return (
     <div>
       <Navbar />
       <LandingPage />
+      <About/>
       <Domains />
       <Timeline1 />
       <Sponsors />
       <Prizes />
       <FAQs />
-      <Timer />
       <Contact />
       <Mouse />
       <Overlay />

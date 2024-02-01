@@ -112,7 +112,9 @@ const Contact = () => {
                 </div>
               </div>
             </div>
+          
           </motion.div>
+          <div className="more"><h4 style={{color:"white"}}>For more details, visit VIT's Official page: <a href="mailto:director.sw@vit.ac.in">director.sw@vit.ac.in</a></h4></div>
         </section>
         <center>
           <motion.div

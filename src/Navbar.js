@@ -1,7 +1,8 @@
 import { motion, useAnimation, useInView } from "framer-motion";
 import React, { useEffect, useRef } from "react";
 import { HashLink as Link } from "react-router-hash-link";
-
+import Robovitics from "./RoboVITics_White_Logo.png"
+import VIT from "./VIT_LOGO_WHITE.png"
 const Navbar = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true });
@@ -15,6 +16,10 @@ const Navbar = () => {
             document.querySelector(".navbar-toggler").click();
           });
       }
+      document.querySelector(".VIT1").style.display="none"
+      document.querySelector(".RoboVITics1").style.display="none"
+      document.querySelector(".VIT2").style.display="block"
+      document.querySelector(".RoboVITics2").style.display="block"
     } else {
       if (document.getElementById("home")) {
         const nav = document.getElementById("home");
@@ -47,7 +52,7 @@ const Navbar = () => {
           hidden: { opacity: 0, y: -30 },
           visible: { opacity: 1, y: 0 },
           up: {
-            y: -50,
+            y: -90,
             transition: {
               duration: 0,
             },
@@ -77,6 +82,9 @@ const Navbar = () => {
           </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav me-auto mb-2">
+              <div className="VIT1">
+                <img src={VIT} style={{width:"200px",position:"absolute",top:"10px",left:"10px"}}/>
+              </div>
               <li class="nav-item">
                 <Link to="#home" class="link">
                   Home
@@ -92,7 +100,7 @@ const Navbar = () => {
                   Timeline
                 </Link>
               </li>
-              <div className="mainIcon">
+              {/* <div className="mainIcon">
                 <div className="mainLogo">
                   <a
                     class="navbar-brand"
@@ -106,7 +114,7 @@ const Navbar = () => {
                     />
                   </a>
                 </div>
-              </div>
+              </div> */}
               <li class="nav-item">
                 <Link to="#prizes" class="link">
                   Prizes
@@ -122,11 +130,14 @@ const Navbar = () => {
                   Contact Us
                 </Link>
               </li>
+              <div className="RoboVITics1">
+                <img src={Robovitics} style={{width:"200px",position:"absolute",top:"20px",right:"20px"}}/>
+              </div>
             </ul>
           </div>
         </div>
       </motion.nav>
-      <div className="pls">
+      {/* <div className="pls">
         <motion.div
           className="mainIcon2"
           variants={{
@@ -143,7 +154,13 @@ const Navbar = () => {
             </a>
           </div>
         </motion.div>
-      </div>
+      </div> */}
+      <div className="VIT2" style={{display:"none"}}>
+                <img src={VIT} style={{width:"200px",position:"absolute",top:"30px",left:"60px",zIndex:"1"}}/>
+              </div>
+              <div className="RoboVITics2" style={{display:"none"}}>
+                <img src={Robovitics} style={{width:"200px",position:"absolute",top:"400px",left:"70px",zIndex:"1"}}/>
+              </div>
     </div>
   );
 };

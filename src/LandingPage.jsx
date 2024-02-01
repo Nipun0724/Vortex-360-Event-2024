@@ -13,6 +13,9 @@ const LandingPage = () => {
   const controls = useAnimation();
   if (inView) {
     controls.start("visible");
+    if(window.innerWidth<1000){
+      document.querySelector(".right-section").style.display="none"
+    }
   }
   const textAnimationControls = useAnimation();
 
@@ -47,7 +50,7 @@ const LandingPage = () => {
       if (window.innerWidth < 900) {
         model.scale.set(18, 18, 18);
       } else {
-        model.scale.set(31, 31, 31);
+        model.scale.set(35, 35, 35);
       }
       scene.add(model);
 
@@ -114,16 +117,9 @@ const LandingPage = () => {
           className="left-section"
           initial={{ opacity: 0 }}
           animate={textAnimationControls}
+          style={{display:"none"}}
         >
-          <div className="text-section">
-            <h2 className="name">VORTEX 360</h2>
-            <p className="description">
-              Vortex360 is an event organised by RoboVITics and powered by
-              AutoDesk is a 3-day CAD modelling design-a-thon where participants
-              think outside the box and come up with amazing designs and expand
-              the horizons of innovation to solve real-world problems.
-            </p>
-          </div>
+          
         </motion.div>
 
         {/* Three.js Container */}
@@ -145,8 +141,11 @@ const LandingPage = () => {
           initial={{ y: 50, opacity: 0 }}
           animate={textAnimationControls}
         >
+          <div className="smt" style={{width:"450px",textAlign:"center",marginLeft:"-150px",marginTop:"-30px"}}>
+            <h4 style={{textAlign:"center",fontStyle:"normal",color:"white"}}>Experience the excitement with us – click below to register for the event..</h4>
+            </div>
           <div className="text-section-right">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdh-xcsVzrt4Zel-XiyBtD3jBIDEHAHM7bfnMMl7YloOPjGyw/formrestricted" target="_blank">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdh-xcsVzrt4Zel-XiyBtD3jBIDEHAHM7bfnMMl7YloOPjGyw/viewform" target="_blank">
               <button class="btn-53">
                 <div
                   class="original"
@@ -171,10 +170,11 @@ const LandingPage = () => {
                   <span>r</span>
                 </div>
               </button>
-              <button className="mobile-button">Register</button>
             </a>
           </div>
         </motion.div>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdh-xcsVzrt4Zel-XiyBtD3jBIDEHAHM7bfnMMl7YloOPjGyw/viewform">
+        <button className="mobile-button">Register</button></a>
       </div>
     </MotionConfig>
   );

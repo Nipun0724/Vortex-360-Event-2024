@@ -65,12 +65,13 @@ export const timeline = [
 
   },
 ];
+
 export const domains = [
   {
     id: 1,
-    name: "Track 1",
+    name: "Robotics in Medicine",
     upper: "carousel-item active",
-    desp: "Tracks would be released soon.",
+    desp: "Surgical precision, bionics and healthcare has transformed exponentially with the rise of robotics, this track focuses on designing of such hardware.",
     bg: vect1,
     bg2: vect2,
     content: [
@@ -91,8 +92,8 @@ export const domains = [
 
   {
     id: 2,
-    name: "Track 2",
-    desp: "Tracks would be released soon.",
+    name: " Household robotics",
+    desp: "This track focuses on designing Smart Home Solutions, Multi-Purpose Utility Robots and Security and Surveillance devices which shall improve user’s quality of life.",
     upper: "carousel-item",
     //upper: "carousel-item carousel-item-next carousel-item-start",
     bg: vect1,
@@ -114,8 +115,8 @@ export const domains = [
   },
   {
     id: 3,
-    name: "Track 3",
-    desp: "Tracks would be released soon.",
+    name: "Product Design",
+    desp: "In this track design adaptive ergonomic solutions, that prioritize innovation with space-saving concepts with portability and mobility which offer functionality without compromising style or efficiency.",
     upper: "carousel-item",
     bg: vect1,
     bg2: vect2,
@@ -136,8 +137,8 @@ export const domains = [
   },
   {
     id: 4,
-    name: "Track 4",
-    desp: "Tracks would be released soon.",
+    name: "Design in Industry",
+    desp: "Design efficient warehousing and storage solutions and smart logistics solutions and productivity enhancement machines equipped with advanced automation, predictive maintenance, and ergonomic design, fostering a more efficient and ergonomic industrial environment, in this track. ",
     upper: "carousel-item",
     bg: vect1,
     bg2: vect2,
@@ -158,8 +159,30 @@ export const domains = [
   },
   {
     id: 5,
-    name: "Track 5",
-    desp: "Tracks would be released soon.",
+    name: "Open Ended/Ideation",
+    desp: "An opportunity to explore the daily life practices, organizational structures, industrial functions completely different from previous tracks and imagination is your limit. ",
+    upper: "carousel-item",
+    bg: vect1,
+    bg2: vect2,
+    content: [
+      [
+        "Subhead1",
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, inventore.",
+      ],
+      [
+        "Subhead2",
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, inventore.",
+      ],
+      [
+        "Subhead3",
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque, inventore.",
+      ],
+    ],
+  },
+  {
+    id: 6,
+    name: "Autodesk",
+    desp: "In this track it's time to bring your ideas to life using Fusion 360, a CAD modeling software powered by Autodesk",
     upper: "carousel-item",
     bg: vect1,
     bg2: vect2,

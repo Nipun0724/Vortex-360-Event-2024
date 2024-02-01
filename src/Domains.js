@@ -11,18 +11,19 @@ const Domains = () => {
     setTimeout(() => {
       document.querySelectorAll("#next-slide")[0].click();
     }, 2000);
+    if(window.innerWidth < 1000){
+      document.querySelector(".smt").style.display="none"
+    }
     controls.start("visible");
   }
   return (
     <div id="domains">
       <hr
         id="domains"
-        style={{ marginBottom: "1.5rem", visibility: "hidden" }}
+        style={{ visibility: "hidden" }}
       />
-      <h1 style={{ marginBottom: "-120px" }}>Tracks</h1>
-
-    <h2>Tracks to be released soon!</h2>
-      {/* <motion.div
+      <h1 style={{marginTop:"0px",marginBottom:"-0px"}} >Tracks</h1>
+       <motion.div
         id="carouselDemo"
         ref={ref}
         class="carousel slide"
@@ -78,21 +79,7 @@ const Domains = () => {
                   {domain.name}
                 </h2>
                 <p>{domain.desp}</p>
-                <Link
-                  to={`/domain/${domain.id}`}
-                  style={{
-                    fontWeight: "bold",
-                    color: "white",
-                    fontSize: "18px",
-                  }}
-                >
-                  More info
-                  <img
-                    src="./icons8-chevron-right-50.png"
-                    alt=""
-                    height="15px"
-                  />
-                </Link>
+                
               </div>
             </div>
           ))}
@@ -115,7 +102,7 @@ const Domains = () => {
         >
           <span class="carousel-control-next-icon"></span>
         </button>
-      </motion.div> */}
+      </motion.div>
     </div>
   );
 };
